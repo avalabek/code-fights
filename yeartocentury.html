@@ -1,0 +1,127 @@
+<!DOCTYPE html >
+  <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+        <title>JavaScript playground</title>
+        
+  </head>
+
+        <body style="background-color:lightsteelblue">
+          <script>
+            //update: it is console logging the right answer; showing error with year.toString in code fight
+function sliceYear(year) {
+  var year;//an integer
+  var yearString= year.toString();//make to a string
+  console.log ("yearString: ", yearString)
+  var yearArray= yearString.split(""); //split string into an array
+  console.log("1yearArray: ", yearArray);
+  // console.log("2yearArray[2,3]: ", yearArray[2], yearArray[3]);
+  
+  const firstDigit = yearArray[0];
+  const firstTwoDigits = yearArray[0] + yearArray[1];
+  // console.log (firstTwoDigits);
+  //this works too
+//   function getCenturyWhenInHundreds(){
+//     if ((yearArray[1] === "0" && yearArray[2] === "0")) {
+//     console.log (firstDigit);
+//   } else { 
+//     console.log (parseInt(firstDigit) + 1);
+//   }
+// };
+//this also works 
+function getCenturyWhenInHundreds(){
+  let cent;
+  const hundreds = yearArray[1]==="0"  ? cent=firstDigit : cent = (parseInt(firstDigit)+1);
+  console.log (cent);
+}
+  
+
+  function  getCenturyInThousands (){
+    if((yearArray[2] === "0" && yearArray[3] === "0")){
+      console.log (parseInt(firstTwoDigits));
+    }else{
+      console.log (parseInt(firstTwoDigits) +1);
+    }
+  }
+ 
+
+  function getCentury(){
+    if (yearArray[2]===undefined){
+      console.log (1);
+    }else if (yearArray[3]===undefined){
+      getCenturyWhenInHundreds()
+    }else {
+      getCenturyInThousands()
+    }
+  }
+getCentury();
+
+}
+  sliceYear("1900");
+    sliceYear("100");
+    sliceYear("1904");
+    sliceYear("1000");
+    sliceYear("110");
+    sliceYear('2');
+    sliceYear("230");
+  // Maybe easier to do it mathematically like for example, to find the century 
+  //of 1984 we know it is 20 so if the last two digits are >0 then the century = the first two digits plus 1
+  //if the last two digits are 00 then the century is the same as the first two digits
+  //if the year is 102 does this work? you'd have to add a digit or make a separate case for 3 digits.
+  //get it to work for 4 digits first I guess
+
+
+     // console.log("century", parseInt(firstTwoDigits)) : console.log("century", parseInt(firstTwoDigits) + 1);
+  // const getCenturyWhenInHundreds = ()=> (yearArray[1]==="0" && yearArray[2]==="0") ?("century", firstDigit): console.log("century", parseInt(firstDigit) + 1);
+  // getCenturyWhenInHundreds();
+
+
+  // getCenturyinThousands();
+
+  // switch (year) {
+  //   case 2000:
+  //     console.log(20);
+  //     break;
+  //   case 1900:
+  //     console.log(19);
+  //     break;
+  //   case 1800:
+  //     console.log(18);
+  //     break;
+  //   default:
+  //     alert("I don't know such values");
+  // }
+
+
+
+
+
+    // if (yearArray[2] && yearArray[3] === 0) {
+    //   var century = yearArray.slice(0, 2);
+    //   console.log("century: ", century);
+    //   var centuryNum = parseInt(century);
+    //   console.log("centuryNum: ", centuryNum);
+    // } else {
+    //   console.log("number does not end in 00");
+
+  
+  //   
+  //     //now need to write a case where the year is 100 or only three so if the length of the string is less than 4
+    
+  // }
+  // else if (year.length === 3) {
+  //   if (year[1] && year[2] === 0) {
+  //     var hundreds = year.slice(0, 1);
+  //     var hundredsNum = parseInt(hundreds);
+  //     console.log("hundredsNum: ", hundredsNum);
+  //   } else {
+  //     console.log("hundredsNum+1: ",hundredsNum + 1);
+  //   }
+  // }
+
+
+
+</script>
+</body>
+</html>

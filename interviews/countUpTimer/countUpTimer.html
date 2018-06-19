@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Count Seconds Timer</title>
+  </head>
+  
+  <body>
+    <div id="seconds">
+
+    </div>
+    
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+    <style>
+      #seconds {
+        border: 3px solid;
+        height: 35px;
+      }
+    </style>
+    <script>
+      function startTimer(){
+      var sec = 0;
+        function pad(val) {
+          return val > 9 ? val : "0" + val;
+        }
+        var timer= setInterval(function () {
+          document.getElementById("seconds").innerHTML = pad(++sec % 60);
+          document.getElementById("minutes").innerHTML = pad(parseInt(sec / 60, 10));
+        }, 1000);
+
+//   var timer = setInterval(function () {...}, 1000 );
+// ...
+//   clearInterval(timer);
+
+        function stopTimer(e) {
+            // console.log(e);
+            clearInterval(timer);
+          }
+        function startTimer(e){
+            console.log("this is start button",e);
+
+          }
+        function resetTimer(e){
+          console.log("this is reset button", e);
+          setInterval(timer, 1000);
+        }
+          const stop = document.querySelectorAll("#stop");
+          stop.forEach(stop => stop.addEventListener("click", stopTimer));
+
+          const start = document.querySelectorAll("#start");
+          start.forEach(start => start.addEventListener("click", startTimer));
+
+          const reset = document.querySelectorAll("#reset");
+          reset.forEach(reset => reset.addEventListener("click", resetTimer));
+
+          // window.addEventListener("click", stopTimer);
+
+  // document.getElementById('stop').addEventListener('click', function () {
+  //   console.log("You finally clicked stop");
+  // });
+      }
+startTimer();
+
+ 
+
+    </script>
+</body>
+</html>
+

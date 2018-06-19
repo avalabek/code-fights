@@ -1,0 +1,20 @@
+
+
+/* One of the common ways to use scaling background images is when you want that image to take up the full background of a page, whether that page is wide and being viewed on a desktop computer or much smaller and is being sent to a handheld, mobile devices.  */
+
+/* Upload your image to your web host and add it to your CSS as a background image: */
+
+background-image: url(fireworks-over-wdw.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+
+/* Add the browser prefixed CSS first: */
+
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+
+/* Then add the CSS property: */
+
+background-size: cover;

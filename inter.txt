@@ -1,0 +1,40 @@
+ Explain the concept of ES6 Promises to a 5-year-old.  
+1 Answer
+What are the advantages of using ES6 maps over objects? What about using ES6 sets over arrays?  
+
+No Offer
+Positive Experience
+Difficult Interview
+
+Application
+
+I applied through a recruiter. The process took 2+ months. I interviewed at Facebook (Menlo Park, CA) in October 2016.
+
+Interview
+
+I applied through a recruiter who contacted me in September. She was nice and we booked a Phone/Screen coding interview.
+
+They are using CoderPad for these. This first interview consisted of 3 questions, they all seemed pretty easy and then the interviewer asked for edge cases, a bit more challenging but nothing impossible. The interviewer was really nice and encouraging.
+
+After that, I had another Phone/Screen interview which was basically the same.… Show More
+
+Interview Questions
+
+    Given 2 identical DOM trees (but not equal) and one element of the first DOM tree, how would you find this element in the second DOM tree?  
+    3 Answers
+    Write an array flatten function.  
+    3 Answers
+    Write an emitter class:
+    /*
+    emitter = new Emitter();
+
+    // 1. Support subscribing to events.
+    sub = emitter.subscribe('event_name', callback);
+    sub2 = emitter.subscribe('event_name', callback2);
+
+    // 2. Support emitting events.
+    // This particular example should lead to the `callback` above being invoked with `foo` and `bar` as parameters.
+    emitter.emit('event_name', foo, bar);
+
+    // 3. Support unsubscribing existing subscriptions by releasing them.
+    sub.release(); // `sub` is the reference returned by `subscribe` above
