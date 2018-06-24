@@ -27,7 +27,7 @@ function makeArrayConsecutive2(statues) {
       statues.sort();
     } else {
       console.log("consecutive")
-    } //note you will have to sort again at the end, unless you can push to an exact position?  }
+    } //note you kiwill have to sort again at the end, unless you can push to an exact position?  }
     console.log("pushed", statues);
   }
   return newStatues.length;
